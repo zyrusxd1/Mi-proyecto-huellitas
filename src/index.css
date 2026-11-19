@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+:root {
+  --color-crema: #F6EFE4;
+  --color-arena: #EADFCB;
+  --color-hueso: #FFFBF5;
+  --color-tinta: #2B2118;
+  --color-tinta-suave: #5C4E41;
+  --color-terracota: #C4572F;
+  --color-terracota-hover: #A8441F;
+  --color-bosque: #2F4B3A;
+  --color-bosque-oscuro: #23392C;
+  --color-mostaza: #E0A030;
+  --color-borde: #D9CBB3;
+  --color-exito: #3F7D4E;
+  --color-pendiente: #B7791F;
+  --color-error: #A33A2A;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-crema);
+    color: var(--color-tinta);
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-crema);
+    color: var(--color-tinta);
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Fraunces', Georgia, serif;
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--color-terracota);
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.card-artesanal {
+  background-color: var(--color-hueso);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(43, 33, 24, 0.04);
+}
+
+.surface-arena {
+  background-color: var(--color-arena);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+}
+
+.btn-terracota {
+  background-color: var(--color-terracota);
+  color: #FFFBF5;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1), transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-terracota:hover:not(:disabled) {
+  background-color: var(--color-terracota-hover);
+}
+
+.btn-terracota:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-bosque {
+  background-color: var(--color-bosque);
+  color: #FFFBF5;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-bosque:hover:not(:disabled) {
+  background-color: var(--color-bosque-oscuro);
+}
+
+.btn-secundario {
+  background-color: var(--color-hueso);
+  color: var(--color-tinta);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  font-weight: 500;
+  transition: background-color 160ms cubic-bezier(0.16, 1, 0.3, 1), border-color 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-secundario:hover:not(:disabled) {
+  background-color: var(--color-arena);
+  border-color: var(--color-tinta-suave);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

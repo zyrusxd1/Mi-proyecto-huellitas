@@ -1,0 +1,6 @@
+{
+  "name": "Asociación Huellitas Bolivia",
+  "description": "Organización de rescate, cuidado y adopción responsable de perros y gatos en La Paz, Bolivia.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
